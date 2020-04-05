@@ -1,0 +1,10 @@
+Bundle-Name: transfer-api
+Bundle-SymbolicName: com.liferay.docs.transfer.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.docs.transfer.exception,\
+	com.liferay.docs.transfer.model,\
+	com.liferay.docs.transfer.service,\
+	com.liferay.docs.transfer.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../transfer-service/service.xml

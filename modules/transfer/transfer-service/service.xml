@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<!-- <service-builder package-path="com.liferay.docs.transfer"> <namespace>FOO</namespace> 
+	<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" 
+	session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager 
+	uuid="true""> <entity local-service="true" name="Foo" remote-service="true" 
+	uuid="true"> -->
+<service-builder auto-namespace-tables="true"
+	package-path="com.liferay.docs.transfer">
+	<author>liferay</author>
+	<namespace>GB</namespace>
+	<entity name="Transfer" local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="transferId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Status fields -->
+
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<!-- <reference entity="AssetEntry" package-path="com.liferay.portlet.asset" 
+			/> <reference entity="AssetTag" package-path="com.liferay.portlet.asset" 
+			/> -->
+	</entity>
+	<entity name="Entry" local-service="true" uuid="true">
+	<column name="entryId" primary="true" type="long" />
+
+<column name="groupId" type="long" />
+<column name="companyId" type="long" />
+<column name="userId" type="long" />
+<column name="userName" type="String" />
+<column name="createDate" type="Date" />
+<column name="modifiedDate" type="Date" />
+ <!-- Status fields -->
+
+ <column name="status" type="int" />
+ <column name="statusByUserId" type="long" />
+ <column name="statusByUserName" type="String" />
+ <column name="statusDate" type="Date" />
+ 
+ <column name="name" type="String" />
+<column name="email" type="String" />
+<column name="message" type="String" />
+<column name="transferId" type="long" />
+<column name="type" type="String" />
+<column name="category" type="String" />
+<column name="contract" type="String" />
+<column name="unit" type="String" />
+<column name="branch" type="String" />
+<column name="unit2" type="String" />
+<column name="branch2" type="String" />
+<column name="comments" type="String" />
+    <finder name="G_G" return-type="Collection">
+        <finder-column name="groupId" />
+        <finder-column name="transferId" />
+    </finder>
+</entity>
+<exceptions>
+    <exception>EntryEmail</exception>
+    <exception>EntryMessage</exception>
+    <exception>EntryName</exception>
+    <exception>TransferName</exception>
+</exceptions>
+</service-builder>

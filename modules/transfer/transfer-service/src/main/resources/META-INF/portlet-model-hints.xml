@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.docs.transfer.model.Entry">
+		<field name="uuid" type="String" />
+		<field name="entryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="email" type="String" />
+		<field name="message" type="String" />
+		<field name="transferId" type="long" />
+		<field name="type" type="String" />
+		<field name="category" type="String" />
+		<field name="contract" type="String" />
+		<field name="unit" type="String" />
+		<field name="branch" type="String" />
+		<field name="unit2" type="String" />
+		<field name="branch2" type="String" />
+		<field name="comments" type="String" />
+	</model>
+	<model name="com.liferay.docs.transfer.model.Transfer">
+		<field name="uuid" type="String" />
+		<field name="transferId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="name" type="String" />
+	</model>
+</model-hints>

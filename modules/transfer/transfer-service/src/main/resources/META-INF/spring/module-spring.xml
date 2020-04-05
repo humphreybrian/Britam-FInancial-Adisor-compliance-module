@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.liferay.docs.transfer.service.impl.EntryLocalServiceImpl" id="com.liferay.docs.transfer.service.EntryLocalService" />
+	<bean class="com.liferay.docs.transfer.service.impl.EntryServiceImpl" id="com.liferay.docs.transfer.service.EntryService" />
+	<bean class="com.liferay.docs.transfer.service.persistence.impl.EntryPersistenceImpl" id="com.liferay.docs.transfer.service.persistence.EntryPersistence" parent="basePersistence" />
+	<bean class="com.liferay.docs.transfer.service.impl.TransferLocalServiceImpl" id="com.liferay.docs.transfer.service.TransferLocalService" />
+	<bean class="com.liferay.docs.transfer.service.impl.TransferServiceImpl" id="com.liferay.docs.transfer.service.TransferService" />
+	<bean class="com.liferay.docs.transfer.service.persistence.impl.TransferPersistenceImpl" id="com.liferay.docs.transfer.service.persistence.TransferPersistence" parent="basePersistence" />
+</beans>

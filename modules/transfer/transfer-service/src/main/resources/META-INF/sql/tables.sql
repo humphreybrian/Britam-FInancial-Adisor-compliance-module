@@ -1,0 +1,42 @@
+create table GB_Entry (
+	uuid_ VARCHAR(75) null,
+	entryId LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	status INTEGER,
+	statusByUserId LONG,
+	statusByUserName VARCHAR(75) null,
+	statusDate DATE null,
+	name VARCHAR(75) null,
+	email VARCHAR(75) null,
+	message VARCHAR(75) null,
+	transferId LONG,
+	type_ VARCHAR(75) null,
+	category VARCHAR(75) null,
+	contract VARCHAR(75) null,
+	unit VARCHAR(75) null,
+	branch VARCHAR(75) null,
+	unit2 VARCHAR(75) null,
+	branch2 VARCHAR(75) null,
+	comments VARCHAR(75) null
+);
+
+create table GB_Transfer (
+	uuid_ VARCHAR(75) null,
+	transferId LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	status INTEGER,
+	statusByUserId LONG,
+	statusByUserName VARCHAR(75) null,
+	statusDate DATE null,
+	name VARCHAR(75) null
+);
